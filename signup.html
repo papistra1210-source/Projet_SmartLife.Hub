@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscription - SmartLife Hub</title>
+
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+}
+
+.signup-container {
+  background: rgba(255,255,255,0.95);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 350px;
+  text-align: center;
+}
+    
+
+    .signup-container img {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #007BFF;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #1e7e34;
+    }
+
+    .message {
+      margin-top: 15px;
+      color: #28a745;
+      font-weight: bold;
+      display: none; /* caché par défaut */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="signup-container">
+   <img src="https://cdn-icons-png.flaticon.com/512/3050/3050275.png" alt="Logo SmartLife Hub" width="80">
+    <h2>Inscrivez-vous maintenant</h2>
+
+    <form id="signupForm">
+      <input type="text" placeholder="Nom" required>
+      <input type="email" placeholder="Email" required>
+      <button type="submit">S’inscrire</button>
+    </form>
+
+    <div class="message" id="thankMessage">Merci pour votre inscription ! ✅</div>
+  </div>
+
+  <script>
+    const form = document.getElementById('signupForm');
+    const message = document.getElementById('thankMessage');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // empêche le rechargement de la page
+      message.style.display = 'block'; // affiche le message
+      form.reset(); // vide les champs du formulaire
+    });
+  </script>
+
+</body>
+</html>
